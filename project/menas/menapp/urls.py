@@ -1,7 +1,0 @@
-from django.urls import path,include
-from . import views
-
-urlpatterns=[
-    path('login/',views.login,name="login"),
-    path('menu/',views.menu,name="menu"),
-]
