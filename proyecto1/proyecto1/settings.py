@@ -54,7 +54,7 @@ ROOT_URLCONF = 'proyecto1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/mis cosas/ProyectosDjango/proyecto1/proyecto1/Templates'],
+        'DIRS': ['C:/Users/jayan/OneDrive/Documents/GitHub/MenasProject/proyecto1/proyecto1/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
