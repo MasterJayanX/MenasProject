@@ -1,0 +1,68 @@
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Men&aacute;s</title>
+        <meta charset="utf-8">
+        <style>
+            html{
+                background-color: #85c1e9;
+            }
+            #perfil{
+                padding: 50px 100px;
+                background-color: #d2b4de;
+                box-sizing: border-box;
+                display: inline-block;
+                border-radius: 30px;
+            }
+            #metodos{
+                background-color: #a9dfbf;
+                padding: 1px 10px;
+                margin: 5px;
+                border-radius: 30px;
+            }
+            #tecnicas{
+                background-color: #a9dfbf;
+                padding: 1px 10px;
+                margin: 5px;
+                border-radius: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="titulo">
+            <h1>Bienvenido a Men&aacute;s</h1>
+        </div>
+        <header>
+            <div id="perfil">
+                <a href="{% url 'login' %}">inicia sesi&oacute;n</a>
+            </div>
+        </header>
+        <div>
+            <div>
+                <p>Esta aplicacion web esta creada con el proposito de que puedas encontrar algun metodo de estudio que mas se adapte a ti y asi poder evitar el estres que genera no tener un plan para estudiar de manera efectiva</p>
+            </div>
+            <div id="metodos">
+                <h2>Metodos de estudio</h2>
+                <h4>Definiremos metodos de estudio como una planificacion que sigue el estudiante considerando el tiempo pero no lo que debe hacer en respectivo tiempo, es decir que el estudiante estudia en general</h4>
+                <h4>Pomodoro:</h4>
+                <p>Este metodo consiste en que el estudiante dispondra de una cantidad de ciclos que contienen un tiempo de estudio y uno de descanso, por defecto se utiliza 25 min de estudio y 5 de descanso pero puede ser modificado a gusto, y esto se repite hasta terminar cada ciclo</p>
+                <h4>Inversion del tiempo</h4>
+                <p>Este metodo es muy parecido a el metodo Pomodoro sin embargo en este no tienes los ciclos, solo dispones de tiempo de estudio y descanso, tu decides cuando comenzar el descanso y cuando terminarlo, por ejemplo puedes querer estudiar 3 horas y tener 1 hora de descanso</p>
+            </div>
+            <div id="tecnicas">
+                <h2>Tecnicas de estudio</h2>
+                <h4>Definiremos Tecnicas de estudio como estrategias que se pueden realizar al momento de estudiar, es decir lo que cada alumno deve hacer sin considerar el tiempo que le destinar&aacute;</h4>
+                <h4>Mapa conceptual</h4>
+                <p>Consiste en que en base a una materia principal ir reduciendo a una materia mas especifica en base a un sistema ramificado</p>
+                <h4>Flashcards</h4>
+                <p>Consiste en crear tarjetas con la informacion a estudiar</p>
+                <h4>Debate</h4>
+                <p>Consiste en discutir con amigos o familiares sobre el tema con tal de lograr memorizar mejor la materia y obtener ideas nuevas sobre la misma</p>
+                <h4>Active recall</h4>
+                <p>Consiste en que al igual que la idea del debate hablarlo pero para ti mismo, sin prescindir de alguien mas</p>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

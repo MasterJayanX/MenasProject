@@ -1,0 +1,23 @@
+{% load crispy_forms_tags %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form class="form-content" enctype="multipart/form-data" method='POST'>
+            {% csrf_token %}
+            <div class="form-group">
+                {{ from.name|as_crispy_field }}
+            </div>
+            <div class="form-group">
+                {{ form.password|as_crispy_field }}
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4">iniciar sesi&oacute;n</button>
+            </div>
+        </form>
+    </body>
+</html>
+{% endblock %}
