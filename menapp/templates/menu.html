@@ -13,8 +13,15 @@
                 padding: 50px 100px;
                 background-color: #d2b4de;
                 box-sizing: border-box;
-                display: inline-block;
                 border-radius: 30px;
+            }
+            #login{
+                padding: 50px 100px;
+                background-color: #d2b4de;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: center;
+                display: inline-block;
             }
             #metodos{
                 background-color: #a9dfbf;
@@ -36,9 +43,17 @@
             <h1>Bienvenido a Men&aacute;s</h1>
         </div>
         <header>
-            <div id="perfil">
-                <button href="{% url 'login' %}">Registrarse</button>
-            </div>
+            {% if user.is_authenticated %}
+                <div id="perfil">
+                    <p>usuario:<br>{{ user.username }}</p>
+                    <a href="{% url 'logout' %}">cerrar sesi&oacute;n</a>
+                </div>
+            {% else %}
+                <div id="login">
+                    <a href="{% url 'login' %}">Iniciar sesi&oacute;n</a><br><br>
+                    <a href=" {% url 'register' %}">Crear cuenta</a>
+                </div>
+            {% endif %}
         </header>
         <div>
             <div>
