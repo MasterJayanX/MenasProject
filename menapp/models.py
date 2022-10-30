@@ -7,7 +7,7 @@ from django.dispatch import receiver
  
 
 class Login(models.Model):
-    name=models.CharField(max_length=100)
+    name=models.CharField(max_length=16)
     password=models.CharField(max_length=100)
     fecha=models.DateTimeField(auto_now=True)
 
