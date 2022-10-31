@@ -35,7 +35,13 @@ def cronometro(request):
         if form.isvalid():
             instance = form.save(commit=False)
             instance.save
-            return redirect('menu')
+            return render(request,'cronometro.html')
     else:
         form=CronometroForm()
     return render(request,'cronometro.html',{'form':form})
+
+
+
+
+
+
