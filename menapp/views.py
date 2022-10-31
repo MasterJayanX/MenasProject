@@ -1,7 +1,7 @@
 from urllib import request
 from django.shortcuts import render,redirect
-from .models import Login
-from .forms import LoginForm, NewRegister
+from .models import Cronometro
+from .forms import NewRegister, CronometroForm
 
 
 
@@ -30,4 +30,12 @@ def cuestionario(request):
 
 
 def cronometro(request):
-    return render(request,'cronometro.html')
+    if request.method =="POST":
+        form = CronometroForm(request.POST)
+        if form.isvalid():
+            instance = form.save(commit=False)
+            instance.save
+            return redirect('menu')
+    else:
+        form=CronometroForm()
+    return render(request,'cronometro.html',{'form':form})

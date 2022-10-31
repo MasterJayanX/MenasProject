@@ -1,15 +1,10 @@
 from django import forms
-from .models import Login
+from .models import Cronometro
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
 #recordar usar el makemirations y el migrate
-class LoginForm(forms.ModelForm):
-    class Meta:
-        model = Login
-        exclude = ["fecha"]
-
 
 
 
@@ -25,3 +20,10 @@ class NewRegister(UserCreationForm):
         self.fields['password2'].label = 'Confirmar contraseña'
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
+
+
+
+class CronometroForm(forms.ModelForm):
+    class Meta:
+        model= Cronometro
+        exclude = ["fecha"]
