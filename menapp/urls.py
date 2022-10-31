@@ -9,4 +9,6 @@ urlpatterns=[
     path('menu/',views.menu,name="menu"),
     path('register/',views.registerView,name="register"),
     path('logout/',LogoutView.as_view(),name='logout'),
+    path('cuestionario/',views.cuestionario,name="cuestionario"),
+    path('cronometro/',views.cronometro,name="cronometro"),
 ]

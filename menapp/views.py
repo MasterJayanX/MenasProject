@@ -23,3 +23,11 @@ def registerView(request):
             form = NewRegister()
     
     return render(request,'registration/register.html',{'form':NewRegister})
+
+
+def cuestionario(request):
+    return render(request,'cuestionario.html')
+
+
+def cronometro(request):
+    return render(request,'cronometro.html')
