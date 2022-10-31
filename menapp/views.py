@@ -32,16 +32,20 @@ def cuestionario(request):
 def cronometro(request):
     if request.method =="POST":
         form = CronometroForm(request.POST)
-        if form.isvalid():
+        if form.is_valid():
             instance = form.save(commit=False)
-            instance.save
-            return render(request,'cronometro.html')
+            instance.save()
+            return render(request,'cronometroactivo.html')
     else:
         form=CronometroForm()
     return render(request,'cronometro.html',{'form':form})
 
 
-
+def cronometroactivo(request):
+    ciclos = Cronometro.ciclos
+    testudio = Cronometro.estudio
+    tdescanso = Cronometro.descanso
+    return render(request, 'cronometroactivo.html', {"ciclos":ciclos,"estudio":testudio,"descanso":tdescanso})
 
 
 
