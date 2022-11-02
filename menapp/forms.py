@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
-#recordar usar el makemirations y el migrate
+#recordar usar el makemigrations y el migrate
 
 
 
