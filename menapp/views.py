@@ -41,11 +41,9 @@ def cronometro(request):
     return render(request,'cronometro.html',{'form':form})
 
 
-def cronometroactivo(request):
-    ciclos = Cronometro.ciclos
-    testudio = Cronometro.estudio
-    tdescanso = Cronometro.descanso
-    return render(request, 'cronometroactivo.html', {"ciclos":ciclos,"estudio":testudio,"descanso":tdescanso})
+def cronometroactivo(request, pk):
+    cronometro=Cronometro.objects.get(pk=12)
+    return render(request, 'cronometroactivo.html', {"cronometro":cronometro,})
 
 
 
