@@ -11,8 +11,7 @@ Entonces en base a esto nace la pregunta ¿Cómo podríamos ayudar a los estudia
 ## Solución
 
 La aplicación web tendrá métodos de estudios (que el usuario pueda decidir si quiere o no que se le proponga un método de estudio en base a un cuestionario).
-Que el usuario ponga la fecha de la “amenaza”, y dependiendo de su método de estudio podamos recomendar un horario y forma de estudio
-temporizador de métodos de estudio (Ej. Pomodoro, Flashcard, método “Hoja”).
+El funcionamiento de la página consiste en que el usuario ponga la fecha de la “amenaza”, y dependiendo de su método de estudio podamos recomendar un horario y forma de estudio, además de incluir un temporizador de métodos de estudio (Ej. Pomodoro, Flashcard, método “Hoja”).
 
 ## Funcionalidades del proyecto
 
