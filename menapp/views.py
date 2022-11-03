@@ -26,8 +26,10 @@ def registerView(request):
 
 
 def cuestionario(request):
-    return render(request,'cuestionario.html')
+    return render(request,'cuestionariol/cuestionario.html')
 
+def pregunta2(request):
+    return render(request,'cuestionariol/pregunta2.html')
 
 def cronometro(request):
     if request.method =="POST":

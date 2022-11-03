@@ -12,4 +12,5 @@ urlpatterns=[
     path('cuestionario/',views.cuestionario,name="cuestionario"),
     path('cronometro/',views.cronometro,name="cronometro"),
     path('cronometroactivo/<pk>/',views.cronometroactivo,name='cronometroactivo'),
+    path('pregunta2/',views.pregunta2,name='pregunta2'),
 ]
