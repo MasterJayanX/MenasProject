@@ -1,6 +1,6 @@
 from urllib import request
 from django.shortcuts import render,redirect
-from .models import Cronometro
+from .models import Cronometro, Pomodoro
 from .forms import NewRegister, CronometroForm
 
 
@@ -29,7 +29,7 @@ def cuestionario(request):
     return render(request,'cuestionario.html')
 
 
-def cronometro(request):
+#def cronometro(request):
     if request.method =="POST":
         form = CronometroForm(request.POST)
         if form.is_valid():
@@ -39,6 +39,10 @@ def cronometro(request):
     else:
         form=CronometroForm()
     return render(request,'cronometro.html',{'form':form})
+
+def cronometro(request):
+    context = {}
+    return render(request, 'cronometro.html', context)
 
 
 def cronometroactivo(request, pk):
