@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <style>
+            .p1{
+                font-family: 'Roboto', sans-serif;
+            }
             #barra{
                 margin:0;
                 padding:14px;
@@ -23,10 +27,10 @@
     </head>
     <body>
         <ul id="barra">
-            <li><a href="{% url 'menu' %}">Men&uacute;</a></li>
-            <li><a href="{% url 'cuestionario' %}">Cuestionario</a></li>
-            <li><a href="{% url 'cronometro' %}">Cron&oacute;metro</a></li>
-            <li>Flashcards</li>
+            <li><a href="{% url 'menu' %}" class="p1">Men&uacute;</a></li>
+            <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
+            <li><a href="{% url 'cronometro' %}" class="p1">Cron&oacute;metro</a></li>
+            <li class="p1">Flashcards</li>
         </ul>
         
     </body>

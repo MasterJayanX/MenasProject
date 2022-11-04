@@ -3,23 +3,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <title>Men&aacute;s</title>
         <meta charset="utf-8">
         <style>
-
+            .p1{
+                font-family: 'Roboto', sans-serif;
+            }
             html{
                 background-color: #85c1e9;
             }
             #perfil{
                 padding: 50px 100px;
                 background-color: #d2b4de;
-                box-sizing: border-box;
-                border-radius: 30px;
+                position: relative
+                left: 4em;
+                box-sizing: content-box;
+                width: 10%;
+                border-radius: 10px;
             }
             #login{
                 padding: 50px 100px;
                 background-color: #d2b4de;
                 box-sizing: border-box;
+                width: 100%;
                 border-radius: 30px;
                 text-align: center;
                 display: inline-block;
@@ -28,62 +35,62 @@
                 background-color: #a9dfbf;
                 padding: 1px 10px;
                 margin: 5px;
-                border-radius: 30px;
+                border-radius: 20px;
             }
             #tecnicas{
                 background-color: #a9dfbf;
                 padding: 1px 10px;
                 margin: 5px;
-                border-radius: 30px;
+                border-radius: 20px;
             }
         </style>
     </head>
     <body>
         {% include "barra.html" %}
         <div class="titulo">
-            <h1>Bienvenida/o a Men&aacute;s</h1>
+            <h1 class="p1">Bienvenida/o a Men&aacute;s</h1>
         </div>
         <header>
             {% if user.is_authenticated %}
                 <div id="perfil">
-                    <p>usuario:<br>{{ user.username }}</p>
-                    <a href="{% url 'logout' %}">Cerrar sesi&oacute;n</a>
+                    <p class="p1">Usuario:<br>{{ user.username }}</p>
+                    <a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a>
                 </div>
             {% else %}
                 <div id="login">
-                    <a href="{% url 'login' %}">Iniciar sesi&oacute;n</a><br><br>
-                    <a href=" {% url 'register' %}">Crear cuenta</a>
+                    <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a><br><br>
+                    <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
                 </div>
             {% endif %}
             <img src="{% static "la.png" %}"/ height="100" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
-            <p>Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
+            <p class="p1">Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
         </header>
         <div>
             <div>
-                <p>Esta aplicaci&oacute;n web est&aacute; creada con el prop&oacute;sito de que puedas encontrar alg&uacute;n m&eacute;todo de estudio que m&aacute;s se adapte a t&iacute; y asi poder evitar el estr&eacute;s que genera no tener un plan para estudiar de manera efectiva.</p>
+                <p class="p1" >Esta aplicaci&oacute;n web est&aacute; creada con el prop&oacute;sito de que puedas encontrar alg&uacute;n m&eacute;todo de estudio que m&aacute;s se adapte a t&iacute; y asi poder evitar el estr&eacute;s que genera no tener un plan para estudiar de manera efectiva.</p>
             </div>
             <div id="metodos">
-                <h2>M&eacute;todos de estudio</h2>
-                <h4>Definiremos m&eacute;todos de estudio como una planificaci&oacute;n que sigue el estudiante considerando el tiempo, pero no lo que debe hacer en respectivo tiempo, es decir que el estudiante estudia en general.</h4>
-                <h4>Pomodoro:</h4>
-                <p>Este metodo consiste en que el estudiante dispondr&aacute; de una cantidad de ciclos que contienen un tiempo de estudio y uno de descanso, por defecto se utiliza 25 minutos de estudio y 5 de descanso pero puede ser modificado a gusto, y esto se repite hasta terminar cada ciclo.</p>
-                <h4>Inversion del tiempo</h4>
-                <p>Este metodo es muy parecido a el m&eacute;todo Pomodoro sin embargo en este no tienes los ciclos, solo dispones de tiempos de estudio y descanso, t&uacute; decides cuando comenzar el descanso y cuando terminarlo, por ejemplo puedes querer estudiar 3 horas y tener 1 hora de descanso.</p>
+                <h2 class="p1">M&eacute;todos de estudio</h2>
+                <h4 class="p1">Definiremos m&eacute;todos de estudio como una planificaci&oacute;n que sigue el estudiante considerando el tiempo, pero no lo que debe hacer en respectivo tiempo, es decir que el estudiante estudia en general.</h4>
+                <h4 class="p1">Pomodoro:</h4>
+                <p class="p1">Este metodo consiste en que el estudiante dispondr&aacute; de una cantidad de ciclos que contienen un tiempo de estudio y uno de descanso, por defecto se utiliza 25 minutos de estudio y 5 de descanso pero puede ser modificado a gusto, y esto se repite hasta terminar cada ciclo.</p>
+                <h4 class="p1">Inversion del tiempo</h4>
+                <p class="p1">Este metodo es muy parecido a el m&eacute;todo Pomodoro sin embargo en este no tienes los ciclos, solo dispones de tiempos de estudio y descanso, t&uacute; decides cuando comenzar el descanso y cuando terminarlo, por ejemplo puedes querer estudiar 3 horas y tener 1 hora de descanso.</p>
             </div>
             <div id="tecnicas">
-                <h2>T&eacute;cnicas de estudio</h2>
-                <h4>Definiremos t&eacute;cnicas de estudio como estrategias que se pueden realizar al momento de estudiar, es decir lo que cada alumno debe hacer sin considerar el tiempo que le destinar&aacute;.</h4>
-                <h4>Mapa conceptual</h4>
-                <p>Consiste en que en base a una materia principal ir reduciendo a una materia mas especifica en base a un sistema ramificado.</p>
-                <h4>Flashcards</h4>
-                <p>Consiste en crear tarjetas (tambi&eacute;n llamadas flashcards) con la informaci&oacute;n a estudiar.</p>
-                <h4>Debate</h4>
-                <p>Consiste en discutir con amigos o familiares sobre el tema con tal de lograr memorizar mejor la materia y obtener ideas nuevas sobre la misma.</p>
-                <h4>Active Recall</h4>
-                <p>Consiste en que al igual que la idea del debate hablarlo pero para ti mismo, sin prescindir de alguien m&aacute;s.</p>
+                <h2 class="p1">T&eacute;cnicas de estudio</h2>
+                <h4 class="p1">Definiremos t&eacute;cnicas de estudio como estrategias que se pueden realizar al momento de estudiar, es decir lo que cada alumno debe hacer sin considerar el tiempo que le destinar&aacute;.</h4>
+                <h4 class="p1">Mapa conceptual</h4>
+                <p class="p1">Consiste en que en base a una materia principal ir reduciendo a una materia mas especifica en base a un sistema ramificado.</p>
+                <h4 class="p1">Flashcards</h4>
+                <p class="p1">Consiste en crear tarjetas (tambi&eacute;n llamadas flashcards) con la informaci&oacute;n a estudiar.</p>
+                <h4 class="p1">Debate</h4>
+                <p class="p1">Consiste en discutir con amigos o familiares sobre el tema con tal de lograr memorizar mejor la materia y obtener ideas nuevas sobre la misma.</p>
+                <h4 class="p1">Active Recall</h4>
+                <p class="p1">Consiste en que al igual que la idea del debate hablarlo pero para ti mismo, sin prescindir de alguien m&aacute;s.</p>
             </div>
             <div>
-                <p>Men&aacute;s es un proyecto open-source creado utilizando el framework Django. El código fuente está disponible en Github <a href="https://github.com/MasterJayanX/MenasProject">(enlace)</a>.</p>
+                <p class="p1">Men&aacute;s es un proyecto open-source creado utilizando el framework Django. El código fuente está disponible en Github <a href="https://github.com/MasterJayanX/MenasProject">(enlace)</a>.</p>
             </div>
         </div>
     </body>
