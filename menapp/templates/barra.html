@@ -28,7 +28,9 @@
     <body>
         <ul id="barra">
             <li><a href="{% url 'menu' %}" class="p1">Men&uacute;</a></li>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
+            {% endif %}
             <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
             <li class="p1">Flashcards</li>
             {% if user.is_authenticated %}
