@@ -7,7 +7,7 @@
                 font-family: 'Roboto', sans-serif;
             }
             #barra{
-                margin:0;
+                margin:7px;
                 padding:14px;
                 list-style:none;
                 text-transform:uppercase;
@@ -17,13 +17,20 @@
             }
 
             #barra li{
+                background-color:#d494bf;
                 display: inline;
                 margin:0 30px;
                 border:1px solid rgba(0,0,0,0.1);
                 padding: 10px;
                 border-radius: 10px;
+                box-shadow:0 0 2px 0 #0000;
             }
-
+            #contenedor {
+                position: absolute;
+                top: -1%;
+                left: 75%;
+                font-size: 25px
+            }
 
         </style>
     </head>
@@ -34,17 +41,22 @@
             <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
             <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
             <li class="p1">Flashcards</li>
-            <li id="perfil">
-                <p class="p1">Usuario:<br>{{ user.username }}</p>
+            <li id="logout">
                 <a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a>
             </li>
             {% else %}
             <li id="login">
-                <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a><br><br>
-                <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
+                <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a>
             </li>
+            <li id="register">
+                <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
             {% endif %}
+            </li>
         </ul>
-        
+        {% if user.is_authenticated %}
+        <div id="contenedor">
+            <p class="p1" id="usuario">Usuario: {{ user.username }}</p>
+        </div>
+        {% endif %}
     </body>
 </html>
