@@ -19,6 +19,7 @@ urlpatterns=[
     path('pregunta6/',views.pregunta6,name='pregunta6'),
     path('pregunta7/',views.pregunta7,name='pregunta7'),
     path('deba/',views.deba,name='deba'),
+    path('temporizador/',views.temporizador,name='temporizador'),
     path('imp/',views.imp,name='imp'),
     path('mapa/',views.mapa,name='mapa'),
     path('acti/',views.acti,name='acti'),
