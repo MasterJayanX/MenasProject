@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,10 +16,8 @@
                 border-radius: 10px;
                 box-shadow:0 0 5px 0 #f2f2f2
             }
-
             #barra li{
-                background-color:#d494bf;
-                display: inline;
+                display: inline-block;
                 margin:0 30px;
                 border:1px solid rgba(0,0,0,0.1);
                 padding: 10px;
@@ -26,10 +25,8 @@
                 box-shadow:0 0 2px 0 #0000;
             }
             #contenedor {
-                position: absolute;
-                top: -1%;
-                left: 75%;
-                font-size: 25px
+                position:relative;
+                left: 25%;
             }
 
         </style>
@@ -41,22 +38,16 @@
             <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
             <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
             <li class="p1">Flashcards</li>
-            <li id="logout">
-                <a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a>
-            </li>
+            <li id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
+            <li id="contenedor"><p id="usuario">Usuario: {{ user.username }}</p></li>
             {% else %}
             <li id="login">
                 <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a>
             </li>
             <li id="register">
                 <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
-            {% endif %}
             </li>
+            {% endif %}
         </ul>
-        {% if user.is_authenticated %}
-        <div id="contenedor">
-            <p class="p1" id="usuario">Usuario: {{ user.username }}</p>
-        </div>
-        {% endif %}
     </body>
 </html>

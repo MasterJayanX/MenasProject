@@ -60,25 +60,6 @@ def inv(request):
     return render(request,'cuestionariol/inv.html')
 def flas(request):
     return render(request,'cuestionariol/flas.html')
-#def cronometro(request):
-    if request.method =="POST":
-        form = CronometroForm(request.POST)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.save()
-            return render(request,'cronometroactivo.html')
-    else:
-        form=CronometroForm()
-    return render(request,'cronometro.html',{'form':form})
-
-def cronometro(request):
-    context = {}
-    return render(request, 'cronometro.html', context)
-
-
-def cronometroactivo(request, pk):
-    cronometro=Cronometro.objects.get(pk=12)
-    return render(request, 'cronometroactivo.html', {"cronometro":cronometro,})
 
 
 
