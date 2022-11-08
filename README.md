@@ -1,4 +1,4 @@
-![Este es Lyda, la mascota de nuestro proyecto](MenasProject/static/la.png "Este es Lyda, la mascota de nuestro proyecto")
+![Este es Lyda, la mascota de nuestro proyecto](static/la.png "Este es Lyda, la mascota de nuestro proyecto")
 
 # Menás Project
  
