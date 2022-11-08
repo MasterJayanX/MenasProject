@@ -1,13 +1,13 @@
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <style>
             .p1{
                 font-family: 'Roboto', sans-serif;
             }
             #marco{
                 margin-bottom:15px;
-                padding:0.007px 10px 0.0005px 110px;
+                padding:0.1px 10px 0.05px 500px;
                 list-style:none;
                 background-color: #d2b4de;
                 border-radius: 20px;
@@ -25,24 +25,26 @@
                 border-radius: 20px;
             }
             #respuestas li{
-                margin: 50px;
+                margin: 20px;
                 border:0px solid rgba(0,0,0,0.3);
                 padding:3px 400px;
                 border-radius: 5px;
             }
         </style>
-    </head>
     <head>
 
     </head>
     <body> 
         {% include "barra.html" %}
             <ul id="marco">
-                <li><p class="p1">¿Preferirias dividir tu mismo el tiempo de estudio o, tener un tiempo estricto?</p></li>
+                <p class="p1">Felicidades, puedes elegir entre estas 3 técnicas de estudio!!:D</p>
+                <p class="p1">Elige la que desees:</p>
             </ul>
             <ul id="respuestas">
-                <li><button><a href="{% url 'inv' %}" class="p1">Yo mismo</button></li>
-                <li><button><a href="{% url 'pomodoro' %}" class="1">Estricto</button></li>
+                <li><button><a href="{% url 'imp' %}" class="p1">Lo importante</button></li>
+                <li><button><a href="{% url 'hoja' %}" class="p1">La hoja</button></li>
+                <li><button><a href="{% url 'mapa' %}" class="p1">Mapa conceptual</button></li>
             </ul>
-    </body>
+        </body>
+
 </html>

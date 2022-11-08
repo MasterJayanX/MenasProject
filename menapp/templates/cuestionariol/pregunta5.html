@@ -38,11 +38,11 @@
     <body> 
         {% include "barra.html" %}
             <ul id="marco">
-                <li><p class="p1">¿Preferirias dividir tu mismo el tiempo de estudio o, tener un tiempo estricto?</p></li>
+                <li><p class="p1">¿Prefieres decir tus ideas en voz alta?</p></li>
             </ul>
             <ul id="respuestas">
-                <li><button><a href="{% url 'inv' %}" class="p1">Yo mismo</button></li>
-                <li><button><a href="{% url 'pomodoro' %}" class="1">Estricto</button></li>
+                <li><button><a href="{% url 'pregunta6' %}" class="p1">Si</button></li>
+                <li><button><a href="{% url 'pregunta7' %}" class="p1">No</button></li>
             </ul>
     </body>
 </html>
