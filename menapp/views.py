@@ -63,3 +63,7 @@ def flas(request):
 
 
 
+def resumen(request):
+    return render(request,'resumen.html')
+
+

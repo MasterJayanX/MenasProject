@@ -37,7 +37,7 @@
             <li><a href="{% url 'menu' %}" class="p1">Men&uacute;</a></li>
             <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
             <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
-            <li class="p1">Flashcards</li>
+            <li class="p1"><a href="{% url 'resumen' %}" class="p1">Tus Resumenes</a></li>
             <li id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
             <li id="contenedor"><p id="usuario">Usuario: {{ user.username }}</p></li>
             {% else %}
