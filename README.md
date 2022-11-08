@@ -1,3 +1,5 @@
+![Este es Lyda, la mascota de nuestro proyecto](static/la.png "Este es Lyda, la mascota de nuestro proyecto")
+
 # Menás Project
  
 Proyecto universitario creado por el grupo Lyda.
