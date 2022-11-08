@@ -18,3 +18,17 @@ El funcionamiento de la página consiste en que el usuario ponga la fecha de la 
 Como se mencionó anteriormente el corazón de este proyecto es que aparte de no ser invasivo, la pagina es capaz de poder ayudar al estudiante a darle una oportunidad de poder encontrar su método de estudio, en base a un cuestionario, lo cual sería más efectivo que si el estudiante tuviera que buscar uno por uno los métodos.
 
 ## Funciones
+
+Menás cuenta con algunas funciones para poder ayudarte a organizarte contra tus "amenazas" (es decir, trabajos o evaluaciones). Algunas de estas son:
+
+### Cuestionario
+
+El cuestionario te permite conocer el método o la técnica de estudio más apropiada para ti a partir de una serie de preguntas.
+
+### Temporizador
+
+Te permite medir tus tiempos de estudio. Puedes elegir el tiempo que deseas pasar estudiando o descansando.
+
+### Flashcards
+
+Trabajo en proceso o como dicen los gringos, WIP (Work in Progress).
