@@ -31,6 +31,17 @@
             <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
             <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
             <li class="p1">Flashcards</li>
+            {% if user.is_authenticated %}
+            <li id="perfil">
+                <p class="p1">Usuario:<br>{{ user.username }}</p>
+                <a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a>
+            </li>
+            {% else %}
+            <li id="login">
+                <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a><br><br>
+                <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
+            </li>
+            {% endif %}
         </ul>
         
     </body>
