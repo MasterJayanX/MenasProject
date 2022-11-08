@@ -1,0 +1,21 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<html>
+    <head>
+    </head>
+    <body>
+        {% include "barra.html" %}
+        <form class="form-content" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.resumen|as_crispy_field }}
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary mt-4">Subir resumen</button>
+            </div>
+        </form>
+    </body>
+</html>
+{% endblock %}

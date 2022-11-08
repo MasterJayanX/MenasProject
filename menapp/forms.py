@@ -1,10 +1,9 @@
 from django import forms
-from .models import Cronometro
+from .models import Resumen
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
-#recordar usar el makemigrations y el migrate
 
 
 
@@ -15,7 +14,7 @@ class NewRegister(UserCreationForm):
     
     def __init__(self,*args,**kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['username'].label = 'Nombre de usuario'
+        self.fields['username'].label = 'Nombre'
         self.fields['password1'].label = 'Contraseña'
         self.fields['password2'].label = 'Confirmar contraseña'
         for fieldname in ['username', 'password1', 'password2']:
@@ -23,7 +22,7 @@ class NewRegister(UserCreationForm):
 
 
 
-class CronometroForm(forms.ModelForm):
+class ResumenForm(forms.ModelForm):
     class Meta:
-        model= Cronometro
+        model= Resumen
         exclude = ["fecha"]

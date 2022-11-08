@@ -1,7 +1,7 @@
 from urllib import request
 from django.shortcuts import render,redirect
-from .models import Cronometro, Pomodoro
-from .forms import NewRegister, CronometroForm
+from .models import Resumen
+from .forms import NewRegister, ResumenForm
 
 
 def temporizador(request):
@@ -66,4 +66,16 @@ def flas(request):
 def resumen(request):
     return render(request,'resumen.html')
 
-
+def nuevoresumen(request):
+    if request.method=="POST":
+        form = ResumenForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.usuario = request.user.username
+            instance.save()
+            return redirect('resumen')
+    else:
+        form=ResumenForm()
+    return render(request, 'nuevoresumen.html',{
+        'form':form
+    })
