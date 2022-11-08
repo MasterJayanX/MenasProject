@@ -9,10 +9,11 @@
 	<title>Temporizador</title>
 	<link rel="stylesheet" href="https://unpkg.com/bulma">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
+	{% include "barra.html" %}
 	<section class="section">
 		<div class="columns is-centered">
 			<div class="column has-text-centered">
