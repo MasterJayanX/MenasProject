@@ -7,10 +7,8 @@ from django.dispatch import receiver
 
 
 
-class Cronometro(models.Model):
-    ciclos=models.CharField(max_length=10)
-    estudio=models.CharField(max_length=10)
-    descanso=models.CharField(max_length=10)
+class Resumen(models.Model):
+    resumen=models.CharField(max_length=1000)
     fecha=models.DateTimeField(auto_now=True)
 
 
