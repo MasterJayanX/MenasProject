@@ -63,6 +63,8 @@ def inv(request):
     return render(request,'cuestionariol/inv.html')
 def flas(request):
     return render(request,'cuestionariol/flas.html')
+def temporizador(request):
+    return render(request,'temporizador/index.html')
 #def cronometro(request):
     if request.method =="POST":
         form = CronometroForm(request.POST)
