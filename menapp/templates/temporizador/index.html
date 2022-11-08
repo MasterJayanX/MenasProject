@@ -1,41 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="app.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temporizador</title>
+	<link rel="stylesheet" href="https://unpkg.com/bulma">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <div class="toolbar">
-        <div class="initial">
-            <form>
-                <input type="text" id="hour">
-                <span id="hourLabel">Horas</span>
-        
-                <input type="text" id="minute">
-                <span id="minuteLabel">Minutos</span>
-        
-                <input type="text" id="second">
-                <span id="secondLabel">Segundos</span>
-            </form>
-            
-            <button id="countup">Iniciar cronómetro</button>
-    
-            <button type="button" id="countdown">Iniciar temporizador</button>
-        </div>
-
-        <span id="hint">Contando hacia atrás 12:20:00</span>
-
-        <button type="button" id="clear">Cuenta regresiva vacía</button>
-        <button type="button" id="pause">Pausar temporizador</button>
-        <button type="button" id="restart">Reclock</button>
-        <button type="button" id="resume">Reanudar temporizador</button>
-        <div>
-
-        </div>
-    </div>
-    <span id="time">00:00:00</span>
+	<section class="section">
+		<div class="columns is-centered">
+			<div class="column has-text-centered">
+				<div id="contenedorInputs">
+					<div class="field">
+						<label class="label">Minutos</label>
+						<div class="control">
+							<input class="input" id="minutos" type="number" placeholder="Minutos">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Segundos</label>
+						<div class="control">
+							<input class="input" id="segundos" type="number" placeholder="Segundos">
+						</div>
+					</div>
+				</div>
+				<h2 id="tiempoRestante">00:00.0</h2>
+				<button id="btnIniciar" class="button is-success"><span class="mdi mdi-play"></span></button>
+				<button id="btnPausar" class="button is-success"><span class="mdi mdi-pause"></span></button>
+				<button id="btnDetener" class="button is-success"><span class="mdi mdi-stop"></span></button>
+				<br>
+			</div>
+		</div>
+	</section>
+	<script src="script.js"></script>
 </body>
 
 </html>
