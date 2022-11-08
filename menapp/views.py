@@ -4,8 +4,8 @@ from .models import Cronometro, Pomodoro
 from .forms import NewRegister, CronometroForm
 
 
-def tempo(request):
-    return render(request,'tempo.html')
+def temporizador(request):
+    return render(request,'temporizador/index.html')
 def menu(request):
     return render(request,'menu.html')
 

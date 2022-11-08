@@ -62,17 +62,6 @@
             <h1 class="p1">Bienvenida/o a Men&aacute;s</h1>
         </div>
         <header>
-            {% if user.is_authenticated %}
-                <div id="perfil">
-                    <p class="p1">Usuario:<br>{{ user.username }}</p>
-                    <a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a>
-                </div>
-            {% else %}
-                <div id="login">
-                    <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a><br><br>
-                    <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
-                </div>
-            {% endif %}
             <img src="{% static "la.png" %}"/ height="100" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
             <p class="p1">Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
         </header>
