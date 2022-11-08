@@ -17,4 +17,4 @@ El funcionamiento de la página consiste en que el usuario ponga la fecha de la 
 
 Como se mencionó anteriormente el corazón de este proyecto es que aparte de no ser invasivo, la pagina es capaz de poder ayudar al estudiante a darle una oportunidad de poder encontrar su método de estudio, en base a un cuestionario, lo cual sería más efectivo que si el estudiante tuviera que buscar uno por uno los métodos.
 
-##Funciones
+## Funciones
