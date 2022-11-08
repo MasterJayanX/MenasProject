@@ -14,18 +14,17 @@ class Cronometro(models.Model):
     fecha=models.DateTimeField(auto_now=True)
 
 
-
-class Pomodoro (models.Model):
+class Pomodoro(models.Model):
     # default values for Pomodoro class
     def __init__(self):
         self.count = 0
-        self.pomodoro = 15 # TODO Default is 27.5
+        self.pomodoro = 15 #TODO Default is 27.5
         self.goal = 8*60
         self.sofar = 0
         self.percentage = 0.0
-        self.breaktime = 3 # TODO: Default is 3
-        self.longbreak = 9 # TODO: Default is 12
-        self.dividend = 4   # TODO: Default is 4
+        self.breaktime = 3 #TODO: Default is 3
+        self.longbreak = 9 #TODO: Default is 12
+        self.dividend = 4   #TODO: Default is 4
         self.remainingPomo = self.set_remaining_pomo(self.goal)
     # adds one pomodoro's worth of time to current session
     def add(self):
