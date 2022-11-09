@@ -1,0 +1,33 @@
+
+.p1{
+    font-family: 'Roboto', sans-serif;
+}
+#marco{
+    margin-bottom:15px;
+    padding:0.007px 150px 0.001px 110px;
+    list-style:none;
+    background-color: #d2b4de;
+    border-radius: 20px;
+}
+#marco li{
+    margin: 20px;
+    padding:3px 400px;
+    border-radius: 5px;
+}
+#respuestas{
+    margin-bottom:285px;
+    padding:0.07px 0.005px 0.01px 220px;
+    list-style:none;
+    background-color: #d2b4de;
+    border-radius: 20px;
+}
+#respuestas li{
+    margin: 50px;
+    border:0px solid rgba(0,0,0,0.3);
+    padding:3px 400px;
+    border-radius: 5px;
+}
+body{
+    background: rgb(255,255,254);
+    background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
+}
