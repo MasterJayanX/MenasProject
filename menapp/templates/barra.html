@@ -43,10 +43,10 @@
             <li class="salchipapa" id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
             <li id="contenedor"><p id="usuario">Usuario: {{ user.username }}</p></li>
             {% else %}
-            <li id="login">
+            <li id="login" class="salchipapa">
                 <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a>
             </li>
-            <li id="register">
+            <li id="register" class="salchipapa">
                 <a href=" {% url 'register' %}" class="p1">Crear cuenta</a>
             </li>
             {% endif %}
