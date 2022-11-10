@@ -64,7 +64,8 @@ def flas(request):
 
 
 def resumen(request):
-    return render(request,'resumen.html')
+    lista_resumenes= Resumen.objects.all()
+    return render(request,'resumen.html',{'lista_resumenes': lista_resumenes})
 
 def nuevoresumen(request):
     if request.method=="POST":
