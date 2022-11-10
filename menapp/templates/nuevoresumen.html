@@ -10,6 +10,9 @@
         <form class="form-content" enctype="multipart/form-data" method="POST">
             {% csrf_token %}
             <div class="form-group">
+                {{ form.titulo|as_crispy_field }}
+            </div>
+            <div class="form-group">
                 {{ form.resumen|as_crispy_field }}
             </div>
             <div class="text-center">

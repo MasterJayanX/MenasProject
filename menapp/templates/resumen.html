@@ -4,18 +4,20 @@
     </head>
     <body>
         {% include "barra.html" %}
-        <h1>TRABAJANDO</h1>
+        <h1>ERROR 404</h1>
         <p>regrese en breve</p>
         <a href="{% url 'nuevoresumen' %}">Subir un nuevo Resumen</a>
             <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
             <thead>
                 <tr>
+                    <th id="titulo">TITULO</th>
                     <th id="resumen">RESUMEN</th>
                 </tr>
             </thead>
             <tbody>
                 {% for resumen in lista_resumenes %}
                     <tr>
+                        <td>{{ resumen.titulo }}</td>
                         <td>{{ resumen.resumen }}</td>
                     </tr>
                 {% endfor %}
