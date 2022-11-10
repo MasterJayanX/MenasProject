@@ -30,4 +30,5 @@ urlpatterns=[
     path('flas/',views.flas,name='flas'),
     path('resumen/',views.resumen,name='resumen'),
     path('nuevoresumen/',views.nuevoresumen,name='nuevoresumen'),
+    path('ver_resumen/<int:pk>/',views.ver_resumen,name='ver_resumen'),
 ]

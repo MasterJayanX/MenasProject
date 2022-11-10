@@ -16,7 +16,7 @@
                 border-radius: 10px;
                 box-shadow:0 0 5px 0 #f2f2f2
             }
-            #barra li{
+            .salchipapa{
                 display: inline-block;
                 margin:0 30px;
                 border:1px solid rgba(0,0,0,0.1);
@@ -24,9 +24,10 @@
                 border-radius: 10px;
                 box-shadow:0 0 2px 0 #0000;
             }
-            #contenedor {
-                position:relative;
-                left: 25%;
+            #contenedor{
+                position:absolute;
+                top:3%;
+                left: 85%;
                 font-family: 'Roboto';
             }
 
@@ -35,11 +36,11 @@
     <body>
         <ul id="barra">
             {% if user.is_authenticated %}
-            <li><a href="{% url 'menu' %}" class="p1">Men&uacute;</a></li>
-            <li><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
-            <li><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
-            <li class="p1"><a href="{% url 'resumen' %}" class="p1">Tus Resúmenes</a></li>
-            <li id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
+            <li class="salchipapa"><a href="{% url 'menu' %}" class="p1">Men&uacute;</a></li>
+            <li class="salchipapa"><a href="{% url 'cuestionario' %}" class="p1">Cuestionario</a></li>
+            <li class="salchipapa"><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
+            <li class="salchipapa"><a href="{% url 'resumen' %}" class="p1">Tus Resúmenes</a></li>
+            <li class="salchipapa" id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
             <li id="contenedor"><p id="usuario">Usuario: {{ user.username }}</p></li>
             {% else %}
             <li id="login">

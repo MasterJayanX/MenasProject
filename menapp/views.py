@@ -80,3 +80,9 @@ def nuevoresumen(request):
     return render(request, 'nuevoresumen.html',{
         'form':form
     })
+
+def ver_resumen(request, pk):
+    datos = Resumen.objects.get(pk=pk)
+    return render(request, 'ver_resumen.html', {
+        'datos':datos
+    })
