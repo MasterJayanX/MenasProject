@@ -86,3 +86,9 @@ def ver_resumen(request, pk):
     return render(request, 'ver_resumen.html', {
         'datos':datos
     })
+
+def borrar_resumen(request, pk):
+    if request.method == "POST":
+        datos = Resumen.objects.get(pk=pk)
+        datos.delete()
+    return redirect('resumen')

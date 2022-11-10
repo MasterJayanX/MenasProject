@@ -17,6 +17,12 @@
                 {% for resumen in lista_resumenes %}
                     <tr>
                         <td><a href="{% url 'ver_resumen' resumen.pk %}">{{ resumen.titulo }}</a></td>
+                        <td>
+                            <form method="POST" action="{% url 'borrar_resumen' resumen.pk %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
