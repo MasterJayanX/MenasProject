@@ -31,6 +31,6 @@ El cuestionario te permite conocer el método o la técnica de estudio más apro
 
 Te permite medir tus tiempos de estudio. Puedes elegir el tiempo que deseas pasar estudiando o descansando.
 
-### Flashcards
+### Resúmenes
 
-Trabajo en proceso o como dicen los gringos, WIP (Work in Progress).
+Te permite hacer y subir tus propios resúmenes de la materia que quieras estudiar.
