@@ -92,3 +92,6 @@ def borrar_resumen(request, pk):
         datos = Resumen.objects.get(pk=pk)
         datos.delete()
     return redirect('resumen')
+
+def nueva_amenaza(request):
+    return render(request,'nueva_amenaza.html')
