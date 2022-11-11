@@ -4,8 +4,6 @@
     </head>
     <body>
         {% include "barra.html" %}
-        <h1>ERROR 404</h1>
-        <p>regrese en breve</p>
         <a href="{% url 'nuevoresumen' %}">Subir un nuevo Resumen</a>
             <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
             <thead>
@@ -15,15 +13,17 @@
             </thead>
             <tbody>
                 {% for resumen in lista_resumenes %}
-                    <tr>
-                        <td><a href="{% url 'ver_resumen' resumen.pk %}">{{ resumen.titulo }}</a></td>
-                        <td>
-                            <form method="POST" action="{% url 'borrar_resumen' resumen.pk %}">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
-                        </td>
-                    </tr>
+                    {% if resumen.usuario == user.username %}
+                        <tr>
+                            <td><a href="{% url 'ver_resumen' resumen.pk %}">{{ resumen.titulo }}</a></td>
+                            <td>
+                                <form method="POST" action="{% url 'borrar_resumen' resumen.pk %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endif %}
                 {% endfor %}
             </tbody>
         </table>

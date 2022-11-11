@@ -10,7 +10,8 @@ from django.dispatch import receiver
 class Resumen(models.Model):
     titulo=models.CharField(max_length=30)
     resumen=models.TextField(max_length=10000)
-    fecha=models.DateTimeField(auto_now=True)
+    fecha=models.DateTimeField(auto_now=True,blank=True)
+    usuario = models.CharField(max_length=100,blank=True)
 
 
 class Pomodoro(models.Model):
