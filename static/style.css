@@ -22,9 +22,8 @@
     border-radius: 20px;
 }
 #respuestas li{
-    margin: 50px auto ;
+    display: inline-block;
     border:0px solid rgba(0,0,0,0.3);
-    padding:3px 43%;
     border-radius: 5px;
 }
 body{

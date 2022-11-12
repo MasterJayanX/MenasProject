@@ -6,6 +6,7 @@ from .forms import NewRegister, ResumenForm
 
 def temporizador(request):
     return render(request,'temporizador/index.html')
+    
 def menu(request):
     return render(request,'menu.html')
 
