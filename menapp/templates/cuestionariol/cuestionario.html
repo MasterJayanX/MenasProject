@@ -5,68 +5,9 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <style>
-            *{
-                text-decoration: none;
-            }
-            #padre_superior{
-                margin-top: 5em;
-                text-align: center;
-            }
-            #padre{
-                background-image: linear-gradient(180deg, #bf90f2 0, #8f6cd8 50%, #594bbf 100%);
-                box-sizing: content-box;
-                display: inline-block;
-                border-radius: 20px;
-                box-shadow:0 0 5px 0 #f2f2f2;
-            }
-            .p1{
-                font-family: 'Roboto', sans-serif;
-            }
-            #marco{
-                text-align: center;
-                margin-bottom:15px;
-                padding:0.007px;
-                list-style:none;
-                border-radius: 20px;
-            }
-            #marco li{
-                box-sizing: content-box;
-                display: inline-block;
-                margin: 20px;
-                border-radius: 20px;
-                background-image: linear-gradient(165deg, #ffc1e8 0, #ffb9ea 12.5%, #ffafed 25%, #ffa6ef 37.5%, #f29df2 50%, #df95f5 62.5%, #c98ff9 75%, #b08cfd 87.5%, #9389ff 100%);
-                padding: 20px;
-                border:1px solid rgba(28, 28, 28, 0.3);
-                box-shadow:0 0 5px 0 #f2f2f2;
-            }
-            #respuestas{
-                margin-bottom:20px;
-                padding:0.07px;
-                list-style:none;
-                border-radius: 20px;
-                text-align: center;
-            }
-            #respuestas li{
-                margin-left: 10px;
-                box-sizing: content-box;
-                display:inline-block;
-                border:1px solid rgba(28, 28, 28, 0.3);
-                padding: 15px 30px;
-                box-shadow:0 0 5px 0 #f2f2f2;
-                background-image: linear-gradient(165deg, #ffc1e8 0, #ffb9ea 12.5%, #ffafed 25%, #ffa6ef 37.5%, #f29df2 50%, #df95f5 62.5%, #c98ff9 75%, #b08cfd 87.5%, #9389ff 100%);
-            }
-            body{
-                background: rgb(255,255,254);
-                background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
-                background-repeat:no-repeat;
-                background-size: auto 70em;
-            }
-            button{
-                border: none;
-                background-color: transparent;
-            }
-        </style>
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plantilla.css' %}">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <title>Men&aacute;s</title>
     </head>
     <body> 
         {% include "barra.html" %}
@@ -82,6 +23,5 @@
             </div>
         </div>
     </body>
-
 </html>
 {% endblock %}
