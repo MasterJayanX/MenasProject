@@ -54,10 +54,12 @@
             <h1 class="p1">Bienvenida/o a Men&aacute;s</h1>
         </div>
         <header>
-            <div>
-                <img src="{% static "la.png" %}"/ height="200" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
-                <p class="p1">Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
-                <div>
+            <div id="caja">
+                <div id="iz">
+                    <img src="{% static "la.png" %}"/ height="200" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
+                    <p class="p1">Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
+                </div>
+                <div id="de">
                     <h2>Tus Amenazas</h2>
                     <a href="{% url 'nueva_amenaza' %}">Subir una nueva amenaza</a>
                 </div>
