@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Temporizador</title>
+	<title>Men&aacute;s</title>
 	<link rel="stylesheet" href="https://unpkg.com/bulma">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="{% static 'estilos.css' %}">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
 	<style>            
 		html {
 			background: rgb(78,94,188);
@@ -20,6 +21,9 @@
 		.section{
 			margin-top:2em
 		}
+		.input{
+			width: 150px;
+		}
 	</style>
 </head>
 
@@ -27,7 +31,7 @@
 	{% include "barra.html" %}
 	<section class="section">
 		<div class="columns is-centered">
-			<div class="column has-text-centered">
+			<div class="column has-text-centered" id="container">
 				<div id="contenedorInputs">
 					<div class="field">
 						<label class="label">Minutos</label>

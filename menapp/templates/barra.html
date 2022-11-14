@@ -4,6 +4,9 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <style>
+            *{
+                text-decoration: none;
+            }
             .p1{
                 font-family: 'Roboto', sans-serif;
             }
@@ -12,23 +15,25 @@
                 padding:14px;
                 list-style:none;
                 text-transform:uppercase;
-                background-color: #b67dbd;
+                background-image: linear-gradient(180deg, #bf90f2 0, #8f6cd8 50%, #594bbf 100%);
                 border-radius: 10px;
-                box-shadow:0 0 5px 0 #f2f2f2
+                box-shadow:0 0 5px 0 #f2f2f2;
+                color: black;
             }
             .salchipapa{
+                background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
                 display: inline-block;
                 margin:0 30px;
                 border:1px solid rgba(0,0,0,0.1);
-                padding: 10px;
+                padding: 10px 20px;
                 border-radius: 10px;
-                box-shadow:0 0 2px 0 #0000;
             }
             #contenedor{
-                position:absolute;
-                top:2%;
-                left: 85%;
-                font-family: 'Roboto';
+                float: right;
+                margin-right: 20px;
+            }
+            a:hover{
+                color: white;
             }
         </style>
     </head>
@@ -40,7 +45,7 @@
             <li class="salchipapa"><a href="{% url 'temporizador' %}" class="p1">Temporizador</a></li>
             <li class="salchipapa"><a href="{% url 'resumen' %}" class="p1">Tus Resúmenes</a></li>
             <li class="salchipapa" id="logout"><a href="{% url 'logout' %}" class="p1">Cerrar sesi&oacute;n</a></li>
-            <li id="contenedor"><p id="usuario">Usuario: {{ user.username }}</p></li>
+            <li id="contenedor"><p id="usuario" class="p1">Usuario: <b>{{ user.username }}</b></p></li>
             {% else %}
             <li id="login" class="salchipapa">
                 <a href="{% url 'login' %}" class="p1">Iniciar sesi&oacute;n</a>

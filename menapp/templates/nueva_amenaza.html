@@ -1,7 +1,31 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
 <html>
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <title>Men&aacute;s</title>
+        <style>
+            html {
+			background: rgb(78,94,188);
+			background: linear-gradient(0deg, rgba(78,94,188,1) 0%, rgba(152,109,133,1) 20%, rgba(160,107,164,1) 35%, rgba(183,133,175,1) 50%, rgba(223,161,195,1) 70%, rgba(229,168,197,1) 85%, rgba(234,174,198,1) 100%);
+			background-repeat:no-repeat;
+			background-size: auto 70em;
+		    }
+        </style>
     </head>
     <body>
-        <h1>HOLA</h1>
+        {% include "barra.html" %}
+        <form class="form-content" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.queamenaza|as_crispy_field }}
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary mt-4">Subir amenaza</button>
+            </div>
+        </form>
     </body>
 </html>
+{% endblock %}

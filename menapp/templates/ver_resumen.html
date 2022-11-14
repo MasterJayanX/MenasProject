@@ -3,13 +3,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <title>Men&aacute;s</title>
+        <style>
+            html {
+			background: rgb(78,94,188);
+			background: linear-gradient(0deg, rgba(78,94,188,1) 0%, rgba(152,109,133,1) 20%, rgba(160,107,164,1) 35%, rgba(183,133,175,1) 50%, rgba(223,161,195,1) 70%, rgba(229,168,197,1) 85%, rgba(234,174,198,1) 100%);
+			background-repeat:no-repeat;
+			background-size: auto 70em;
+		    }
+        </style>
     </head>
     <body>
         {% include "barra.html" %}
-        <h1>{{ datos.titulo }}</h1>
-        <p>{{ datos.resumen }}</p>
-        <p>{{ datos.fecha }}</p>
+        <div>
+            <h1>{{ datos.titulo }}</h1>
+            <p>{{ datos.resumen }}</p>
+            <p>{{ datos.fecha }}</p>
+        </div>
     </body>
 </html>
 {% endblock %}

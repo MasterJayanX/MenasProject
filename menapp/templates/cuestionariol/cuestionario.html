@@ -5,20 +5,23 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plantilla.css' %}">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <title>Men&aacute;s</title>
     </head>
     <body> 
         {% include "barra.html" %}
-        <div>
-            <ul id="marco">
-                <li><p class="p1">¿Deseas el Trabajo fraccionado?</p></li>
-            </ul>
-            <ul id="respuestas">
-                <li><button><a href="{% url 'pregunta2' %}" class="p1">Si</button></li>
-                <li><button><a href="{% url 'pregunta3' %}" class="p1">No</button></li>
-            </ul>
+        <div id="padre_superior">
+            <div id="padre">
+                <ul id="marco">
+                        <li><p class="p1">¿Deseas el Trabajo fraccionado?</p></li>
+                </ul>
+                <ul id="respuestas">
+                        <li><button><a href="{% url 'pregunta2' %}" class="p1">Si</a></button></li>
+                        <li><button><a href="{% url 'pregunta3' %}" class="p1">No</button></li>
+                </ul>
+            </div>
         </div>
     </body>
-
 </html>
 {% endblock %}
