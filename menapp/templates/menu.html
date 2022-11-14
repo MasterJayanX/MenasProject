@@ -45,6 +45,23 @@
                 background: rgb(255,255,254);
                 background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
             }
+            #caja {
+                background-color: red;
+                border-radius: 20px;
+                overflow: hidden;
+                display: inline-block;
+            }
+            #iz {
+                display: inline-block;
+                padding: 0 5px;
+                float: left;
+            }
+            #de {
+                background-color: #8c6bbd;
+                display: inline-block;
+                box-sizing:content-box;
+                padding: 0 30px;
+            }
         </style>
     </head>
     <body>
@@ -57,12 +74,23 @@
             <div id="caja">
                 <div id="iz">
                     <img src="{% static "la.png" %}"/ height="200" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
-                    <p class="p1">Lyda dice: Crear una cuenta te permitir&aacute; guardar tus datos en la p&aacute;gina.</p>
+                    {% if user.is_authenticated %}
+                        <p class="p1">Puedes hacer el cuestionario para<br>descubrir tu <n>estrategia de estudio</n></p>
+                    {% else %}
+                        <p class="p1">Crear una cuenta te permitir&aacute; acceder a todo el contenido de la p&aacute;gina.</p>
+                    {% endif %}
                 </div>
-                <div id="de">
-                    <h2>Tus Amenazas</h2>
-                    <a href="{% url 'nueva_amenaza' %}">Subir una nueva amenaza</a>
-                </div>
+                {% if user.is_authenticated %}
+                    <div id="de">
+                        <h2>Tus Amenazas</h2>
+                        <a href="{% url 'nueva_amenaza' %}">Subir una nueva amenaza</a>
+                        <p>miercoles 16 control de quimica</p>
+                        <p>lunes 21 de mayo control de mat022 y entrega 3er avance</p>
+                        <p>miercoles 23 control de fisica y de quimica</p>
+                        <br>
+                        <p>la idea es que estos datos salgan de subir una amenaza</p>
+                    </div>
+                {% endif %}
             </div>
         </header>
         <div>
