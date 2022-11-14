@@ -20,7 +20,7 @@
         <form class="form-content" enctype="multipart/form-data" method="POST">
             {% csrf_token %}
             <div class="form-group">
-                {{ form.queamenaza|as_crispy_field }}
+                {{ form.amenaza|as_crispy_field }}
             </div>
             <div class="text-center">
               <button type="submit" class="btn btn-primary mt-4">Subir amenaza</button>
