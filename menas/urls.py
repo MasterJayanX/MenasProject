@@ -19,5 +19,6 @@ from menapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('menapp/',include('menapp.urls')),
     path('',views.menu, name='menu'),
 ]
