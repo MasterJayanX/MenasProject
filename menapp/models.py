@@ -12,7 +12,10 @@ class Resumen(models.Model):
     resumen=models.TextField(max_length=10000)
     fecha=models.DateTimeField(auto_now=True,blank=True)
     usuario = models.CharField(max_length=100,blank=True)
-
+class Amenaza(models.Model):
+    queamenaza=models.CharField(max_length=30)
+    fecha=models.DateTimeField(auto_now=True,blank=True)
+    usuario = models.CharField(max_length=100,blank=True)
 
 class Pomodoro(models.Model):
     # default values for Pomodoro class

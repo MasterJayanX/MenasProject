@@ -1,7 +1,7 @@
 from urllib import request
 from django.shortcuts import render,redirect
-from .models import Resumen
-from .forms import NewRegister, ResumenForm
+from .models import Resumen, Amenaza
+from .forms import NewRegister, ResumenForm, AmenazaForm
 from random import randint
 
 
@@ -97,4 +97,15 @@ def borrar_resumen(request, pk):
     return redirect('resumen')
 
 def nueva_amenaza(request):
-    return render(request,'nueva_amenaza.html')
+    if request.method=="POST":
+        form = AmenazaForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.usuario = request.user.username
+            instance.save()
+            return redirect('amenaza')
+    else:
+        form=AmenazaForm()
+    return render(request, 'nueva_amenaza.html',{
+        'form':form
+    })
