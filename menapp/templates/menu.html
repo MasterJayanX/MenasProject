@@ -14,20 +14,11 @@
             }
             .p2{
                 font-family: 'Roboto', sans-serif;
-                font-size: 10px;
+                font-size: 12px;
             }
             html{
                 background: rgb(255,255,254);
                 background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
-            }
-            #perfil{
-                padding: 50px 100px;
-                background-color:  	#8c6bbd;
-                position: relative;
-                left: 4em;
-                box-sizing: content-box;
-                width: 10%;
-                border-radius: 2px;
             }
             #metodos{
                 background-color: #d494bf;
@@ -61,6 +52,13 @@
                 box-sizing:content-box;
                 padding: 0 30px;
             }
+            #de a{
+                font-size: 20px;
+                padding: 5px 10px ;
+                border-radius: 5px;
+                background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
+
+            }
         </style>
     </head>
     <body>
@@ -73,16 +71,20 @@
             <div id="caja" class="p1">
                 <div id="iz">
                     <img src="{% static "la.png" %}"/ height="200" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
-                    {% if user.is_authenticated %}
-                        <p class="p1">Puedes hacer el cuestionario para<br>descubrir tu <n>estrategia de estudio</n></p>
+                    {% if user.is_authenticated and numero == 0 %}
+                        <p class="p1">Puedes hacer el cuestionario para<br>descubrir tu <b>estrategia de estudio</b></p>
+                    {% elif user.is_authenticated and numero == 1 %}
+                        <p class="p1">Puedes utilizar el <b>temporizador</b> para <br> organizar tus tiempos de estudio</p>
+                    {% elif user.is_authenticated and numero == 2 %}
+                        <p class="p1">Puedes guardar tus <b>res&uacute;menes</b> y <br>revisarlos cuando quieras</p>
                     {% else %}
                         <p class="p1">Crear una cuenta te permitir&aacute; acceder a todo el contenido de la p&aacute;gina.</p>
                     {% endif %}
                 </div>
                 {% if user.is_authenticated %}
                     <div id="de">
-                        <h2>Tus Amenazas</h2>
-                        <a href="{% url 'nueva_amenaza' %}">Subir una nueva amenaza</a>
+                        <h2 class="p1">Tus Amenazas</h2>
+                        <a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a>
                         <ul>
                             <li><p>miercoles 16 control de quimica</p></li>
                             <li><p>lunes 21 de mayo control de mat022 y entrega 3er avance</p></li>
@@ -117,9 +119,9 @@
                 <p class="p1">Consiste en discutir con amigos o familiares sobre el tema con tal de lograr memorizar mejor la materia y obtener ideas nuevas sobre la misma.</p>
                 <h4 class="p1">Active Recall</h4>
                 <p class="p1">Consiste en que al igual que la idea del debate hablarlo pero para ti mismo, sin prescindir de alguien m&aacute;s.</p>
-                <p class="p2">Men&aacute;s es un proyecto open-source creado utilizando el framework Django. El código fuente está disponible en Github <a href="https://github.com/MasterJayanX/MenasProject">(enlace)</a>.</p>
-                
             </div>
+            <p class="p2">Men&aacute;s es un proyecto open-source creado utilizando el framework Django. El código fuente está disponible en Github <a href="https://github.com/MasterJayanX/MenasProject">(enlace)</a>.</p>
+
         </div>
     </body>
 </html>

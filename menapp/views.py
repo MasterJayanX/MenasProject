@@ -2,13 +2,15 @@ from urllib import request
 from django.shortcuts import render,redirect
 from .models import Resumen
 from .forms import NewRegister, ResumenForm
+from random import randint
 
 
 def temporizador(request):
     return render(request,'temporizador/index.html')
     
 def menu(request):
-    return render(request,'menu.html')
+    numero=randint(0,2)
+    return render(request,'menu.html',{'numero':numero})
 
 
 def registerView(request):
