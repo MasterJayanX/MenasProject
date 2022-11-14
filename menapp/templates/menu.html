@@ -37,7 +37,7 @@
                 background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
             }
             #caja {
-                background-color: #d494bf;
+                background-color: #8c6bbd;
                 border-radius: 20px;
                 overflow: hidden;
                 display: inline-block;
@@ -86,11 +86,6 @@
                          <h2 class="p1">Tus Amenazas</h2>
                         <a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a>
                         <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
-                            <thead>
-                                <tr>
-                                    <th id="titulo">Tus amenazas</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 {% for menas in lista_amenazas %}
                                     {% if menas.usuario == user.username %}
