@@ -10,7 +10,7 @@ def temporizador(request):
     
 def menu(request):
     numero=randint(0,2)
-    return render(request,'menu.html',{'numero':numero})
+    return render(request,'menu.html',{'numero':numero,'lista_amenazas': lista_amenazas}})
 
 
 def registerView(request):
@@ -103,7 +103,7 @@ def nueva_amenaza(request):
             instance = form.save(commit=False)
             instance.usuario = request.user.username
             instance.save()
-            return redirect('amenaza')
+            return redirect('menu')
     else:
         form=AmenazaForm()
     return render(request, 'nueva_amenaza.html',{
