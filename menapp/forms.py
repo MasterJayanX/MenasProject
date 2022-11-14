@@ -1,5 +1,5 @@
 from django import forms
-from .models import Resumen
+from .models import Resumen, Amenaza
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -25,4 +25,9 @@ class NewRegister(UserCreationForm):
 class ResumenForm(forms.ModelForm):
     class Meta:
         model= Resumen
+        exclude = ["fecha"]
+        
+class AmenazaForm(forms.ModelForm):
+    class Meta:
+        model= Amenaza
         exclude = ["fecha"]
