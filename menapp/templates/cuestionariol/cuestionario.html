@@ -1,57 +1,27 @@
+{% load static %}
 
+{% block content %}
 <!DOCTYPE html>
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <style>
-            .p1{
-                font-family: 'Roboto', sans-serif;
-            }
-            #marco{
-                text-align: center;
-                margin-bottom:15px;
-                padding:0.007px 150px 0.001px 110px;
-                list-style:none;
-                background-color: #d2b4de;
-                border-radius: 20px;
-            }
-            #marco li{
-                margin: 20px;
-                padding:3px 400px;
-                border-radius: 20px;
-            }
-            #respuestas{
-                margin-bottom:auto;
-                padding:0.07px 0.005px 0.01px 220px;
-                list-style:none;
-                background-color: #d2b4de;
-                border-radius: 20px;
-            }
-            #respuestas li{
-                margin: 50px auto ;
-                border:0px solid rgba(0,0,0,0.3);
-                padding:3px 43%;
-                border-radius: 5px;
-            }
-            body{
-                background: rgb(255,255,254);
-                background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgba(156,13,56,1) 17%, rgba(206,83,116,1) 39%, rgba(180,103,178,1) 59%, rgba(147,129,255,1) 80%, rgba(92,149,255,1) 100%);
-                background-repeat:no-repeat;
-                background-size: auto 70em;
-            }
-        </style>
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plantilla.css' %}">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <title>Men&aacute;s</title>
     </head>
     <body> 
         {% include "barra.html" %}
-        <div>
-            <ul id="marco">
-                <li><p class="p1">¿Deseas el Trabajo fraccionado?</p></li>
-            </ul>
-            <ul id="respuestas">
-                <li><button><a href="{% url 'pregunta2' %}" class="p1">Si</button></li>
-                <li><button><a href="{% url 'pregunta3' %}" class="p1">No</button></li>
-            </ul>
+        <div id="padre_superior">
+            <div id="padre">
+                <ul id="marco">
+                        <li><p class="p1">¿Deseas el Trabajo fraccionado?</p></li>
+                </ul>
+                <ul id="respuestas">
+                        <li><button><a href="{% url 'pregunta2' %}" class="p1">Si</a></button></li>
+                        <li><button><a href="{% url 'pregunta3' %}" class="p1">No</button></li>
+                </ul>
+            </div>
         </div>
     </body>
-
 </html>
+{% endblock %}
