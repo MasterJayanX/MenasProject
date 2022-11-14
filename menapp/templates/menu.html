@@ -83,15 +83,24 @@
                 </div>
                 {% if user.is_authenticated %}
                     <div id="de">
-                        <h2 class="p1">Tus Amenazas</h2>
+                         <h2 class="p1">Tus Amenazas</h2>
                         <a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a>
-                        <ul>
-                            <li><p>miercoles 16 control de quimica</p></li>
-                            <li><p>lunes 21 de mayo control de mat022 y entrega 3er avance</p></li>
-                            <li><p>miercoles 23 control de fisica y de quimica</p></li>
-                            <br>
-                            <li><p>la idea es que estos datos salgan de subir una amenaza</p></li>
-                        </ul>
+                        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
+                            <thead>
+                                <tr>
+                                    <th id="titulo">Tus amenazas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for menas in lista_amenazas %}
+                                    {% if menas.usuario == user.username %}
+                                        <tr>
+                                            <li>{{ menas.amenaza }}</li>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </tbody>
+                            </table>
                     </div>
                 {% endif %}
             </div>
