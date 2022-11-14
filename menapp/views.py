@@ -10,6 +10,7 @@ def temporizador(request):
     
 def menu(request):
     numero=randint(0,2)
+    lista_amenazas= Amenaza.objects.all()
     return render(request,'menu.html',{'numero':numero,'lista_amenazas': lista_amenazas}})
 
 
