@@ -16,9 +16,11 @@
     </head>
     <body>
         {% include "barra.html" %}
-        <h1>{{ datos.titulo }}</h1>
-        <p>{{ datos.resumen }}</p>
-        <p>{{ datos.fecha }}</p>
+        <div>
+            <h1>{{ datos.titulo }}</h1>
+            <p>{{ datos.resumen }}</p>
+            <p>{{ datos.fecha }}</p>
+        </div>
     </body>
 </html>
 {% endblock %}
