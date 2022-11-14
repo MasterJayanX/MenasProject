@@ -1,5 +1,5 @@
 :root {
-    --gradient:linear-gradient(45deg, #39b4ff 0, #58b1ff 8.33%, #70adff 16.67%, #85aaff 25%, #98a5fc 33.33%, #a9a1f8 41.67%, #b99df2 50%, #c799eb 58.33%, #d395e3 66.67%, #de91da 75%, #e78ed0 83.33%, #ef8bc5 91.67%, #f589bb 100%);;
+    --gradient:linear-gradient(45deg, #39b4ff 0, #58b1ff 8.33%, #70adff 16.67%, #85aaff 25%, #98a5fc 33.33%, #a9a1f8 41.67%, #b99df2 50%, #c799eb 58.33%, #d395e3 66.67%, #de91da 75%, #e78ed0 83.33%, #ef8bc5 91.67%, #f589bb 100%);
 }
 body{
     background-size: 400%;
