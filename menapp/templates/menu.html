@@ -52,7 +52,6 @@
                 display: inline-block;
             }
             #iz {
-                display: inline-block;
                 padding: 0 5px;
                 float: left;
             }
@@ -71,7 +70,7 @@
             <h1 class="p1">Bienvenida/o a Men&aacute;s</h1>
         </div>
         <header>
-            <div id="caja">
+            <div id="caja" class="p1">
                 <div id="iz">
                     <img src="{% static "la.png" %}"/ height="200" alt="Este es Lyda, la mascota de nuestro proyecto." title="Hola, soy Lyda y ser&eacute; tu gu&iacute;a."> 
                     {% if user.is_authenticated %}
@@ -84,11 +83,13 @@
                     <div id="de">
                         <h2>Tus Amenazas</h2>
                         <a href="{% url 'nueva_amenaza' %}">Subir una nueva amenaza</a>
-                        <p>miercoles 16 control de quimica</p>
-                        <p>lunes 21 de mayo control de mat022 y entrega 3er avance</p>
-                        <p>miercoles 23 control de fisica y de quimica</p>
-                        <br>
-                        <p>la idea es que estos datos salgan de subir una amenaza</p>
+                        <ul>
+                            <li><p>miercoles 16 control de quimica</p></li>
+                            <li><p>lunes 21 de mayo control de mat022 y entrega 3er avance</p></li>
+                            <li><p>miercoles 23 control de fisica y de quimica</p></li>
+                            <br>
+                            <li><p>la idea es que estos datos salgan de subir una amenaza</p></li>
+                        </ul>
                     </div>
                 {% endif %}
             </div>
