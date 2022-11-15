@@ -4,7 +4,7 @@
 body{
     background-size: 400%;
     background-image: var(--gradient);
-    animation: bg-animation 20s infinite alternate;
+    animation: bg-animation 60s infinite alternate;
 }
 @keyframes bg-animation{
     0% {background-position: left}

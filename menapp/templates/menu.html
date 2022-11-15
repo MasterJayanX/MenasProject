@@ -32,7 +32,6 @@
             }
 
             #caja {
-                margin-top: -6.4em;
                 margin-left:1em;
                 background-color: #d494bf;
                 border-radius: 20px;
@@ -44,12 +43,14 @@
                 float: left;
             }
             #de {
+                box-sizing: content-box;
                 background-color: #8c6bbd;
                 display: inline-block;
-
                 padding: 0 30px;
                 height:17.145em;
-                max-width: 450px;
+            }
+            #de table{
+                margin-top: 200px;
             }
             #de a{
                 margin-left:30px;
@@ -57,9 +58,9 @@
                 padding: 5px 10px ;
                 border-radius: 5px;
                 background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
-
             }
             .titulo {
+                padding: 5px;
                 font-family: 'Roboto', sans-serif;
                 margin: 0 0 0.5em;
                 text-transform: uppercase;
@@ -68,20 +69,21 @@
                 font-size: 2rem;
                 color:#ee6352;
                 line-height: 0.8;
+                margin: 0;
                 background-image: var(--gradient);
-                background-clip: text;
+                -webkit-background-clip: text;
                 color: transparent;
             }
             #content {
+                width: auto;
+                text-align:center;
+                box-sizing:content-box;
                 float: right;
                 background: white;
-                width: 30vw;
-                height: 2vw;
                 padding: 2.3em;
-                box-shadow: 0 0 3em rgba(0,0,0,.15);
-                margin-left: 51.8em;
-                margin-top:2em;
                 border-radius: 10px;
+                margin: 5px;
+                z-index: 2;
             }
         </style>
     </head>
@@ -107,19 +109,20 @@
                 </div>
                 {% if user.is_authenticated %}
                     <div id="de">
-                        <h2 class="p1">Tus Amenazas</h2>
-                        <a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a>
                         <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
+                            <thead>
+                                <tr><h2 class="p1">Tus Amenazas</h2></tr>
+                                <tr><a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a></tr>
+                                <tr><br><br></tr>
+                            </thead>
                             <tbody>
                                 {% for menas in lista_amenazas %}
                                     {% if menas.usuario == user.username %}
-                                        <tr>
-                                            <li>{{ menas.amenaza }}</li>
-                                        </tr>
+                                        <tr>{{ menas.amenaza }}<br></tr>
                                     {% endif %}
                                 {% endfor %}
                             </tbody>
-                            </table>
+                        </table>
                     </div>
                 {% endif %}
             </div>
