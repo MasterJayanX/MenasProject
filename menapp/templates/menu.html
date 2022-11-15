@@ -32,6 +32,8 @@
             }
 
             #caja {
+                margin-top: -6.4em;
+                margin-left:1em;
                 background-color: #d494bf;
                 border-radius: 20px;
                 overflow: hidden;
@@ -48,19 +50,44 @@
                 padding: 0 30px;
             }
             #de a{
+                margin-left:30px;
                 font-size: 20px;
                 padding: 5px 10px ;
                 border-radius: 5px;
                 background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
 
             }
+            .titulo {
+                font-family: 'Roboto', sans-serif;
+                margin: 0 0 0.5em;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-style: italic;
+                font-size: 2rem;
+                color:#ee6352;
+                line-height: 0.8;
+                margin-left: 0em;
+                background-image: var(--gradient);
+                background-clip: text;
+                color: transparent;
+            }
+            #content {
+                background: white;
+                width: 30vw;
+                height: 2vw;
+                padding: 2.3em;
+                box-shadow: 0 0 3em rgba(0,0,0,.15);
+                margin-left: 51.8em;
+                margin-top:2em;
+                border-radius: 10px;
+            }
         </style>
     </head>
     <body>
         
         {% include "barra.html" %}
-        <div class="titulo">
-            <h1 class="p1">Bienvenida/o a Men&aacute;s</h1>
+        <div id="content">
+            <h1 class="titulo">Bienvenida/o a Menás</h1>
         </div>
         <header>
             <div id="caja" class="p1">
@@ -93,7 +120,7 @@
         </header>
         <div>
             <div>
-                <p class="p1" >Esta aplicaci&oacute;n web est&aacute; creada con el prop&oacute;sito de que puedas encontrar alg&uacute;n m&eacute;todo de estudio que m&aacute;s se adapte a t&iacute; y asi poder evitar el estr&eacute;s que genera no tener un plan para estudiar de manera efectiva.</p>
+                <p class="p1" >Esta aplicaci&oacute;n web est&aacute; creada con el prop&oacute;sito de que puedas encontrar alg&uacute;n m&eacute;todo de estudio que m&aacute;s se adapte a t&iacute; y asi poder evitar el estr&eacute;s que genera no tener un plan, método o técnica de estudio efectivo.</p>
             </div>
             <div id="metodos">
                 <h2 class="p1">M&eacute;todos de estudio</h2>
