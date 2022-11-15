@@ -13,7 +13,7 @@ class Resumen(models.Model):
     fecha=models.DateTimeField(auto_now=True,blank=True)
     usuario = models.CharField(max_length=100,blank=True)
 class Amenaza(models.Model):
-    amenaza=models.CharField(max_length=50)
+    amenaza=models.CharField(max_length=100)
     fecha=models.DateTimeField(auto_now=True,blank=True)
     usuario = models.CharField(max_length=100,blank=True)
 
