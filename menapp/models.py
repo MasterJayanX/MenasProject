@@ -8,10 +8,11 @@ from django.dispatch import receiver
 
 
 class Resumen(models.Model):
-    titulo=models.CharField(max_length=30)
-    resumen=models.TextField(max_length=10000)
+    titulo=models.CharField(max_length=40)
+    resumen=models.TextField(max_length=100000)
     fecha=models.DateTimeField(auto_now=True,blank=True)
     usuario = models.CharField(max_length=100,blank=True)
+
 class Amenaza(models.Model):
     amenaza=models.CharField(max_length=100)
     fecha=models.DateTimeField(auto_now=True,blank=True)

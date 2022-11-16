@@ -6,66 +6,122 @@
         <link rel="stylesheet"  type="text/css" href ="{% static  'boton.css' %}">
         <title>Men&aacute;s</title>
         <style>
+            *{
+                font-family: 'Roboto', sans-serif;
+            }
             html {
-			background: rgb(78,94,188);
-			background: linear-gradient(0deg, rgba(78,94,188,1) 0%, rgba(152,109,133,1) 20%, rgba(160,107,164,1) 35%, rgba(183,133,175,1) 50%, rgba(223,161,195,1) 70%, rgba(229,168,197,1) 85%, rgba(234,174,198,1) 100%);
-			background-repeat:no-repeat;
-			background-size: auto 70em;
-		    }
+                background: rgb(78,94,188);
+                background: linear-gradient(0deg, rgba(78,94,188,1) 0%, rgba(152,109,133,1) 20%, rgba(160,107,164,1) 35%, rgba(183,133,175,1) 50%, rgba(223,161,195,1) 70%, rgba(229,168,197,1) 85%, rgba(234,174,198,1) 100%);
+                background-repeat:no-repeat;
+                background-size: auto 70em;
+            }
             #subir_resumen{
                 border-radius: 5px;
+                float: right;
+                margin: 30px;
+                width: 200px;
+                height: 53px;
+                font-size: 20px;
+                font-weight: 500;
             }
             #subir_resumen:link,#subir_resumen:visited {
-            background-color: white;
-            color: black;
-            border: 2px solid rgb(212, 58, 255);
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
+                background-color: white;
+                color: black;
+                border: 2px solid rgb(212, 58, 255);
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
             }
             #subir_resumen:hover, #subir_resumen:active {
-            background-color: rgb(212, 58, 255);
-            color: white;
+                background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
+                color: black;
+            }
+            #ver_resumen{
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: -16px;
+                height:30px;
+                border-radius: 10px;
+            }
+            #ver_resumen:link,#ver_resumen:visited{
+                background-color: white;
+                color: black;
+                border: 2px solid rgb(212, 58, 255);
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            #ver_resumen:hover, #ver_resumen:active{
+                background-image: radial-gradient(circle at 50% -20.71%, #ffddfc 0, #fdd0f8 16.67%, #efc3f5 33.33%, #deb5f2 50%, #caa9f0 66.67%, #b49eef 83.33%, #9a96ee 100%);
+                color: black;
+            }
+            
+            .padre_superior{
+                margin-top: 5em;
+                text-align: center;
+            }
+            .padre{
+                background-image: linear-gradient(180deg, #bf90f2 0, #8f6cd8 50%, #594bbf 100%);
+                box-sizing: content-box;
+                display: inline-block;
+                border-radius: 20px;
+                box-shadow:0 0 5px 0 #f2f2f2;
+            }
+            table{
+                margin: 30px;
+            }
+            #titulo{
+                font-size: 30px;
+                font-weight: 500;
+            }
+            .hijo{
+                box-sizing: content-box;
+            }
+            #td_buttondel{
+                max-width: 210px;
             }
         </style>
     </head>
     <body>
         {% include "barra.html" %}
-        <div>
-            <a href="{% url 'nuevoresumen' %}" id="subir_resumen" class="p1">Subir un nuevo Resumen</a>
-            <table class="p1" cellspacing="10" aria-describedby="mydesc">
-                <thead>
-                    <tr>
-                        <th id="titulo" class="p1">Titulo del Resumen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for resumen in lista_resumenes %}
-                        {% if resumen.usuario == user.username %}
-                            <tr>
-                                <td><a href="{% url 'ver_resumen' resumen.pk %}">{{ resumen.titulo }}</a></td>
-                                <td>
-                                    <form method="POST" action="{% url 'borrar_resumen' resumen.pk %}">
-                                        {% csrf_token %}
-                                        <div class="contenedor-botones">
-                                            <button type="submit" class="boton" id="buttondelete">
-                                                <div class="icono">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                                    </svg>
-                                                </div>
-                                                <span>Eliminar</span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </td>
-                            </tr>
-                        {% endif %}
-                    {% endfor %}
-                </tbody>
-            </table>
+        <div class="padre_superior">
+            <div class="padre">
+                <a href="{% url 'nuevoresumen' %}" id="subir_resumen" class="p1">Subir un nuevo Resumen</a>
+                <table class="p1" cellspacing="15" aria-describedby="mydesc">
+                    <thead>
+                        <tr>
+                            <th id="titulo" class="p1">Resumenes:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for resumen in lista_resumenes %}
+                            {% if resumen.usuario == user.username %}
+                                <tr>
+                                    <td class="hijo"><a href="{% url 'ver_resumen' resumen.pk %}" id="ver_resumen">{{ resumen.titulo }}</a></td>
+                                    <td id="td_buttondel">
+                                        <form method="POST" action="{% url 'borrar_resumen' resumen.pk %}">
+                                            {% csrf_token %}
+                                            <div class="contenedor-botones">
+                                                <button type="submit" class="boton" id="buttondelete">
+                                                    <div class="icono">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Eliminar</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>

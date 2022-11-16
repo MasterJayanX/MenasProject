@@ -31,13 +31,13 @@
     transition: .3s ease all;
 }
 
-#buttondelete span{
+.boton span{
     transition: .4s ease-in-out all;
     position: absolute;
     left: 34%;
 }
 
-#buttondelete .icono{
+.boton .icono{
     display: flex;
     align-items: center;
     position: absolute;
@@ -48,21 +48,21 @@
     left: -40px;
 }
 
-#buttondelete:hover {
+.boton:hover {
     background: red;
 }
 
-#buttondelete:hover span{
+.boton:hover span{
     left: 20px;
 }
 
-#buttondelete svg{
+.boton svg{
     color: #fff;
     width: 35px;
     height: 35px;
 }
 
-#buttondelete:hover .icono{
+.boton:hover .icono{
     left: 149px;
     opacity: 1;
 }
