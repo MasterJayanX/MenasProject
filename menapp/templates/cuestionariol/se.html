@@ -5,7 +5,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet"  type="text/css" href ="{% static  'plantilla.css' %}">
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plant.css' %}">
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
         <title>Men&aacute;s</title>
     <head>
@@ -19,8 +19,8 @@
                     <li><p class="p1">¡¡Felicidades!!, tienes la tecnica del Resumen o el mapa conceptual para elegir.<br><br>Elige la que desees:</p></li>
                 </ul>
                 <ul id="respuestas">
-                    <li><button><a href="{% url 'resu' %}" class="p1">Resumen</button></li>
-                    <li><button><a href="{% url 'mapa' %}" class="p1">Mapa conceptual</button></li>
+                    <li><button><a href="{% url 'resu' %}" class="p1">Resumen</a></button></li>
+                    <li><button><a href="{% url 'mapa' %}" class="p1">Mapa conceptual</a></button></li>
                 </ul>      
             </div>
         </div>     

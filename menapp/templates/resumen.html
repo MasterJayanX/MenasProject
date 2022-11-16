@@ -12,13 +12,28 @@
 			background-repeat:no-repeat;
 			background-size: auto 70em;
 		    }
-
+            #subir_resumen{
+                border-radius: 5px;
+            }
+            #subir_resumen:link,#subir_resumen:visited {
+            background-color: white;
+            color: black;
+            border: 2px solid rgb(212, 58, 255);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+            #subir_resumen:hover, #subir_resumen:active {
+            background-color: rgb(212, 58, 255);
+            color: white;
+            }
         </style>
     </head>
     <body>
         {% include "barra.html" %}
         <div>
-            <a href="{% url 'nuevoresumen' %}" class="p1">Subir un nuevo Resumen</a>
+            <a href="{% url 'nuevoresumen' %}" id="subir_resumen" class="p1">Subir un nuevo Resumen</a>
             <table class="p1" cellspacing="10" aria-describedby="mydesc">
                 <thead>
                     <tr>

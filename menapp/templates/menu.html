@@ -43,16 +43,14 @@
                 float: left;
             }
             #de {
+                min-width: 400px;
                 box-sizing: content-box;
-                background-color: #8c6bbd;
                 display: inline-block;
                 padding: 0 30px;
-                height:17.145em;
-            }
-            #de table{
-                margin-top: 200px;
             }
             #de a{
+                position: relative;
+                float: right;
                 margin-left:30px;
                 font-size: 20px;
                 padding: 5px 10px ;
@@ -111,14 +109,14 @@
                     <div id="de">
                         <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
                             <thead>
-                                <tr><h2 class="p1">Tus Amenazas</h2></tr>
-                                <tr><a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a></tr>
-                                <tr><br><br></tr>
+                                <tr><td><h2 class="p1">Tus Amenazas</h2><a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a></td></tr>
                             </thead>
                             <tbody>
                                 {% for menas in lista_amenazas %}
                                     {% if menas.usuario == user.username %}
-                                        <tr>{{ menas.amenaza }}<br></tr>
+                                        <tr>
+                                            <td>{{ menas.amenaza }}</td>
+                                        </tr>
                                     {% endif %}
                                 {% endfor %}
                             </tbody>

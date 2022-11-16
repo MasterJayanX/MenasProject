@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet"  type="text/css" href ="{% static  'plantilla.css' %}">
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plant.css' %}">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
         <title>Men&aacute;s</title>
@@ -17,8 +17,8 @@
                     <li><p class="p1">¿Prefieres anotar con detalle o general?</p></li>
                 </ul>
                 <ul id="respuestas">
-                    <li><button><a href="{% url 'pri' %}" class="p1">Detalle</button></li>
-                    <li><button><a href="{% url 'se' %}" class="p1">General</button></li>
+                    <li><button><a href="{% url 'pri' %}" class="p1">Detalle</a></button></li>
+                    <li><button><a href="{% url 'se' %}" class="p1">General</a></button></li>
                 </ul>
             </div>
         </div>
