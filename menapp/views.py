@@ -110,3 +110,6 @@ def nueva_amenaza(request):
     return render(request, 'nueva_amenaza.html',{
         'form':form
     })
+
+def usuario(request):
+    return render(request,'usuario.html')

@@ -32,5 +32,6 @@ urlpatterns=[
     path('nuevoresumen/',views.nuevoresumen,name='nuevoresumen'),
     path('ver_resumen/<int:pk>/',views.ver_resumen,name='ver_resumen'),
     path('resumen/<int:pk>/',views.borrar_resumen, name='borrar_resumen'),
-    path('nueva_amenaza/',views.nueva_amenaza,name='nueva_amenaza')
+    path('nueva_amenaza/',views.nueva_amenaza,name='nueva_amenaza'),
+    path('usuario/',views.usuario,name='usuario'),
 ]
