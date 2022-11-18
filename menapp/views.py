@@ -111,8 +111,5 @@ def nueva_amenaza(request):
         'form':form
     })
 
-def borrar_amenaza(request, pk):
-    if request.method == "POST":
-        datos = Amenaza.objects.get(pk=pk)
-        datos.delete()
-    return redirect('menu')
+def usuario(request):
+    return render(request,'usuario.html')
