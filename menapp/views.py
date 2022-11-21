@@ -4,7 +4,8 @@ from .models import Resumen, Amenaza
 from .forms import NewRegister, ResumenForm, AmenazaForm
 from random import randint
 
-
+def pag(request):
+    return render(request,'pag.html')
 def temporizador(request):
     return render(request,'temporizador/index.html')
     

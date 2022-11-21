@@ -35,4 +35,5 @@ urlpatterns=[
     path('nueva_amenaza/',views.nueva_amenaza,name='nueva_amenaza'),
     path('usuario/',views.usuario,name='usuario'),
     path('menu/<int:pk>/',views.borrar_amenaza,name='borrar_amenaza'),
+    path('pag/',views.pag,name='pag'),
 ]

@@ -1,0 +1,51 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>Men&aacute;s</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"  type="text/css" href ="{% static  'plant.css' %}">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'lyda.ico' %}">
+        <link rel="stylesheet"  href ="{% static  'back.css' %}">
+        <title>Men&aacute;s</title>
+        <style>
+            #er{
+                background-image: linear-gradient(180deg, #afacfd 0, #9d9df2 50%, #8a8ee7 100%);
+                padding: 1px 10px;
+                margin: 5px;
+                border-radius: 20px;
+                box-shadow:0 0 5px 0 #f2f2f2;
+            }
+            #ausente{
+                text-align: center;
+            }
+            body{
+                background-size: auto 70em;
+                background-image: var(--gradient);
+                animation: bg-animation 60s infinite alternate;
+            }
+            @keyframes bg-animation{
+                0% {background-position: left}
+                50% {background-position: right}
+                100% {background-position: left}
+            }
+        </style>
+    </head>
+    <body class="p1">
+        {% include "barra.html" %}
+        <div id="padre_superior">
+            <div id="padre">
+                <ul id="marco">
+                    <li><p class="p1">Este cuestionario te permitira conocer tu metodo o tecnica de estudio podras realizarlo las veces que estimes necesario<br><br> ¿Deseas continuar?</p></li>
+                </ul>
+                <ul id="respuestas">
+                    <li><button><a href="{% url 'menu' %}" class="p1">No</a></button></li>
+                    <li><button><a href="{% url 'cuestionario' %}" class="1">Si</a></button></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

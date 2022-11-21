@@ -48,7 +48,7 @@
         <ul id="barra" class="p1">
             {% if user.is_authenticated %}
             <li><a href="{% url 'menu' %}" class="salchipapa">Men&uacute;</a></li>
-            <li><a href="{% url 'cuestionario' %}" class="salchipapa">Cuestionario</a></li>
+            <li><a href="{% url 'pag' %}" class="salchipapa">Cuestionario</a></li>
             <li><a href="{% url 'temporizador' %}" class="salchipapa" id="tempor">Temporizador</a></li>
             <li><a href="{% url 'resumen' %}" class="salchipapa">Tus Resúmenes</a></li>
             <li id="logout"><a href="{% url 'logout' %}" class="salchipapa">Cerrar sesi&oacute;n</a></li>
