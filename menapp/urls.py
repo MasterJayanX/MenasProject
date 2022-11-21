@@ -34,4 +34,5 @@ urlpatterns=[
     path('resumen/<int:pk>/',views.borrar_resumen, name='borrar_resumen'),
     path('nueva_amenaza/',views.nueva_amenaza,name='nueva_amenaza'),
     path('usuario/',views.usuario,name='usuario'),
+    path('menu/<int:pk>/',views.borrar_amenaza,name='borrar_amenaza'),
 ]
