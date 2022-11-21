@@ -19,21 +19,23 @@
             }
             
             #metodos{
-                background-color: #d494bf;
+                background-image: linear-gradient(180deg, #afacfd 0, #9d9df2 50%, #8a8ee7 100%);
                 padding: 1px 10px;
                 margin: 10px;
                 border-radius: 20px;
+                box-shadow:0 0 5px 0 #f2f2f2;
             }
             #tecnicas{
-                background-color: #d494bf;
+                background-image: linear-gradient(180deg, #afacfd 0, #9d9df2 50%, #8a8ee7 100%);
                 padding: 1px 10px;
                 margin: 5px;
                 border-radius: 20px;
+                box-shadow:0 0 5px 0 #f2f2f2;
             }
 
             #caja {
                 margin-left:1em;
-                background-color: #d494bf;
+                background-image: radial-gradient(circle at 50% -20.71%, #fbded2 0, #fad7cc 10%, #f8d0c6 20%, #f7c8c0 30%, #f5bfba 40%, #f2b5b5 50%, #efabb1 60%, #eba3af 70%, #e79bae 80%, #e294ae 90%, #dd8eb0 100%);
                 border-radius: 20px;
                 overflow: hidden;
                 display: inline-block;
@@ -49,6 +51,8 @@
                 padding: 0 30px;
             }
             #de a{
+                box-shadow:0 0 3px 0 #531a1e;
+                border:1px solid transparent;
                 position: relative;
                 float: right;
                 margin-left:30px;
@@ -83,6 +87,34 @@
                 margin: 5px;
                 z-index: 2;
             }
+            #fiumba:hover{
+                border:1px solid white;
+                color: blue;
+            }
+            #del {
+                min-width: 130px;
+                height: 40px;
+                color: #fff;
+                padding: 5px 10px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                display: inline-block;
+                outline: none;
+                border-radius: 5px;
+                border: none;
+                background: #ef233c;
+                box-shadow: 0 5px #d90429;
+            }
+            #del:hover {
+                box-shadow: 0 3px #d90429;
+                top: 1px;
+            }
+            #del:active {
+                box-shadow: 0 0 #d90429;
+                top: 5px;
+            }
         </style>
     </head>
     <body>
@@ -109,7 +141,7 @@
                     <div id="de">
                         <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
                             <thead>
-                                <tr><td><h2 class="p1">Tus Amenazas</h2><a href="{% url 'nueva_amenaza' %}" class="p1">Subir una nueva amenaza</a></td></tr>
+                                <tr><td><h2 class="p1">Tus Amenazas</h2><a href="{% url 'nueva_amenaza' %}" class="p1" id="fiumba">Subir una nueva amenaza</a></td></tr>
                             </thead>
                             <tbody>
                                 {% for menas in lista_amenazas %}
@@ -119,7 +151,7 @@
                                             <td>
                                                 <form method="POST" action="{% url 'borrar_amenaza' menas.pk %}">
                                                     {% csrf_token %}
-                                                    <button type="submit" class="btn btn-danger"><div class="icono">
+                                                    <button type="submit" class="btn btn-danger" id="del"><div class="icono">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                                             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>

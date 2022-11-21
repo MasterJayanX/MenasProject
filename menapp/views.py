@@ -95,6 +95,7 @@ def borrar_resumen(request, pk):
     if request.method == "POST":
         datos = Resumen.objects.get(pk=pk)
         datos.delete()
+
     return redirect('resumen')
 
 def nueva_amenaza(request):
