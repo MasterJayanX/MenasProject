@@ -6,7 +6,6 @@ from django.dispatch import receiver
 # Create your models here.
 
 
-
 class Resumen(models.Model):
     titulo=models.CharField(max_length=40)
     resumen=models.TextField(max_length=100000)
